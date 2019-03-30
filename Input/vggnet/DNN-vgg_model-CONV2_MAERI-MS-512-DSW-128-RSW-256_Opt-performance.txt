@@ -1,0 +1,1102 @@
+Model Name: vgg_model
+Layer Type: CONV
+Layer Number: 2
+Total number of Multiplier Switches: 512
+Total number of Mapping Strategies: 8
+
+==================================================================
+Mapping Strategy 0: 
+Tile Size: <T_X = 3, T_Y = 3, T_C = 14, T_K = 4, T_N = 1, T_X' = 1, T_Y' = 1>
+Average utilization rate: 0.900748
+
+-------------------------------------------------------------------
+Configuration 0
+
+Mapping: - Size of Virtual Neuron (VN): 126
+- Number of VNs: 4
+- Number of Idle Multiplier Switches: 8
+
+Distribute Network: 
+- Number of unicast in weights: (504) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (126) (42) 
+- Number of multicast in inputs: (126) 
+- Size of unicast in inputs: (4) 
+- Number of access between distribute switches: 77132160
+- Normalized energy of distribute network 7.71322e+07
+
+Reduce Network: 
+- Number of reduce operations: 2007040000
+- Number of access between reduce switches: 4030136320
+- Normalized energy of Reduce Network: 6.03718e+09 ( accessing RSs = 4.03014e+09, reduce operation = 2.00704e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2023096320
+- Number of register access of the multiplier switch: 2703482880
+- Number of forward access between multiplier switches: 1342709760
+- Normalized energy of Multiplier Network: 6.06929e+09 ( forward energy = 1.34271e+09, accessing local buffer in MS = 2.70348e+09, multiply operations = 2.0231e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected (single control step): 4
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 40320
+- Number of inputs read: 170096640
+- Number of outputs write: 16056320
+- Number of input data streams: 4014080
+- Number of weight data streams: 80
+- Normalized energy of accessing on-chip Scratchpad Memory: 1.48955e+09 ( SPM input read = 1.36077e+09, SPM weight read = 322560, SPM write = 1.28451e+08 )
+
+Performance: 
+- Number of control steps: 4014080
+- Runtime cycles: 4014400
+- Peak utilization rate in configuration 0 is: 0.984375
+- Average utilization rate in configuration 0 is: 0.9
+
+Code Size: 
+- Code size is: 360
+
+-------------------------------------------------------------------
+Configuration 1
+
+Mapping: - Size of Virtual Neuron (VN): 5
+- Number of VNs: 102
+- Number of Idle Multiplier Switches: 2
+
+Distribute Network: 
+- Number of unicast in weights: (0) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (510) 
+- Number of multicast in inputs: (0) 
+- Size of unicast in inputs: (0) 
+- Number of access between distribute switches: 144506970
+- Normalized energy of distribute network 1.44507e+08
+
+Reduce Network: 
+- Number of reduce operations: 12845064
+- Number of access between reduce switches: 32112660
+- Normalized energy of Reduce Network: 4.49577e+07 ( accessing RSs = 3.21127e+07, reduce operation = 1.28451e+07 )
+
+Multiplier Network: 
+- Number of multiplications: 0
+- Number of register access of the multiplier switch: 16056330
+- Number of forward access between multiplier switches: 0
+- Normalized energy of Multiplier Network: 1.60563e+07 ( forward energy = 0, accessing local buffer in MS = 1.60563e+07, multiply operations = 0 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected: 0
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 0
+- Number of inputs read: 16056330
+- Number of outputs write: 3211266
+- Number of input data streams: 31483
+- Number of weight data streams: 0
+- Normalized energy of accessing on-chip Scratchpad Memory: 1.54141e+08 ( SPM input read = 1.28451e+08, SPM weight read = 0, SPM write = 2.56901e+07 )
+
+Performance: 
+- Number of control steps: 31483
+- Runtime cycles: 125932
+- Peak utilization rate in configuration 1 is: 0
+- Average utilization rate in configuration 1 is: 0.996093
+
+Code Size: 
+- Code size is: 24
+
+-------------------------------------------------------------------
+Total Configurations: 
+
+Mapping: Distribute Network: 
+- Number of access between distribute switches: 221639130
+- Normalized energy of distribute network 2.21639e+08
+
+Reduce Network: 
+- Number of reduce operations: 2019885064
+- Number of access between reduce switches: 4062248980
+- Normalized energy of Reduce Network: 6.08213e+09 ( accessing RSs = 4.06225e+09, reduce operation = 2.01989e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2023096320
+- Number of register access of the multiplier switch: 2719539210
+- Number of forward access between multiplier switches: 1342709760
+- Normalized energy of Multiplier Network: 6.08535e+09 ( forward energy = 1.34271e+09, accessing local buffer in MS = 2.71954e+09, multiply operations = 2.0231e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 40320
+- Number of inputs read: 186152970
+- Number of outputs write: 19267586
+- Number of input data streams: 4045563
+- Number of weight data streams: 80
+- Normalized energy of accessing on-chip Scratchpad Memory: 1.64369e+09 ( SPM input read = 1.48922e+09, SPM weight read = 322560, SPM write = 1.54141e+08 )
+
+Performance: 
+- Number of control steps: 4045563
+- Runtime cycles: 4140332
+Code Size: 
+- Code size is: 384
+
+- Dram energy is: 5.20722e+08
+- Average utilization rate throughout the whole layer: 0.900748
+
+==================================================================
+Mapping Strategy 1: 
+Tile Size: <T_X = 3, T_Y = 3, T_C = 8, T_K = 7, T_N = 1, T_X' = 1, T_Y' = 1>
+Average utilization rate: 0.901235
+
+-------------------------------------------------------------------
+Configuration 0
+
+Mapping: - Size of Virtual Neuron (VN): 72
+- Number of VNs: 7
+- Number of Idle Multiplier Switches: 8
+
+Distribute Network: 
+- Number of unicast in weights: (504) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (72) (24) 
+- Number of multicast in inputs: (72) 
+- Size of unicast in inputs: (7) 
+- Number of access between distribute switches: 71326080
+- Normalized energy of distribute network 7.13261e+07
+
+Reduce Network: 
+- Number of reduce operations: 1994997760
+- Number of access between reduce switches: 4074291200
+- Normalized energy of Reduce Network: 6.06929e+09 ( accessing RSs = 4.07429e+09, reduce operation = 1.995e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2023096320
+- Number of register access of the multiplier switch: 2703482880
+- Number of forward access between multiplier switches: 1342709760
+- Normalized energy of Multiplier Network: 6.06929e+09 ( forward energy = 1.34271e+09, accessing local buffer in MS = 2.70348e+09, multiply operations = 2.0231e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected (single control step): 7
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 40320
+- Number of inputs read: 97198080
+- Number of outputs write: 28098560
+- Number of input data streams: 4014080
+- Number of weight data streams: 80
+- Normalized energy of accessing on-chip Scratchpad Memory: 1.0027e+09 ( SPM input read = 7.77585e+08, SPM weight read = 322560, SPM write = 2.24788e+08 )
+
+Performance: 
+- Number of control steps: 4014080
+- Runtime cycles: 4014400
+- Peak utilization rate in configuration 0 is: 0.984375
+- Average utilization rate in configuration 0 is: 0.9
+
+Code Size: 
+- Code size is: 216
+
+-------------------------------------------------------------------
+Configuration 1
+
+Mapping: - Size of Virtual Neuron (VN): 8
+- Number of VNs: 64
+- Number of Idle Multiplier Switches: 0
+
+Distribute Network: 
+- Number of unicast in weights: (0) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (512) 
+- Number of multicast in inputs: (0) 
+- Size of unicast in inputs: (0) 
+- Number of access between distribute switches: 231211008
+- Normalized energy of distribute network 2.31211e+08
+
+Reduce Network: 
+- Number of reduce operations: 22478848
+- Number of access between reduce switches: 44957696
+- Normalized energy of Reduce Network: 6.74365e+07 ( accessing RSs = 4.49577e+07, reduce operation = 2.24788e+07 )
+
+Multiplier Network: 
+- Number of multiplications: 0
+- Number of register access of the multiplier switch: 25690112
+- Number of forward access between multiplier switches: 0
+- Normalized energy of Multiplier Network: 2.56901e+07 ( forward energy = 0, accessing local buffer in MS = 2.56901e+07, multiply operations = 0 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected: 0
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 0
+- Number of inputs read: 25690112
+- Number of outputs write: 3211264
+- Number of input data streams: 50176
+- Number of weight data streams: 0
+- Normalized energy of accessing on-chip Scratchpad Memory: 2.31211e+08 ( SPM input read = 2.05521e+08, SPM weight read = 0, SPM write = 2.56901e+07 )
+
+Performance: 
+- Number of control steps: 50176
+- Runtime cycles: 200704
+- Peak utilization rate in configuration 1 is: 1
+- Average utilization rate in configuration 1 is: 1
+
+Code Size: 
+- Code size is: 24
+
+-------------------------------------------------------------------
+Total Configurations: 
+
+Mapping: Distribute Network: 
+- Number of access between distribute switches: 302537088
+- Normalized energy of distribute network 3.02537e+08
+
+Reduce Network: 
+- Number of reduce operations: 2017476608
+- Number of access between reduce switches: 4119248896
+- Normalized energy of Reduce Network: 6.13673e+09 ( accessing RSs = 4.11925e+09, reduce operation = 2.01748e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2023096320
+- Number of register access of the multiplier switch: 2729172992
+- Number of forward access between multiplier switches: 1342709760
+- Normalized energy of Multiplier Network: 6.09498e+09 ( forward energy = 1.34271e+09, accessing local buffer in MS = 2.72917e+09, multiply operations = 2.0231e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 40320
+- Number of inputs read: 122888192
+- Number of outputs write: 31309824
+- Number of input data streams: 4064256
+- Number of weight data streams: 80
+- Normalized energy of accessing on-chip Scratchpad Memory: 1.23391e+09 ( SPM input read = 9.83106e+08, SPM weight read = 322560, SPM write = 2.50479e+08 )
+
+Performance: 
+- Number of control steps: 4064256
+- Runtime cycles: 4215104
+Code Size: 
+- Code size is: 240
+
+- Dram energy is: 7.80835e+08
+- Average utilization rate throughout the whole layer: 0.901235
+
+==================================================================
+Mapping Strategy 2: 
+Tile Size: <T_X = 3, T_Y = 3, T_C = 7, T_K = 8, T_N = 1, T_X' = 1, T_Y' = 1>
+Average utilization rate: 0.901484
+
+-------------------------------------------------------------------
+Configuration 0
+
+Mapping: - Size of Virtual Neuron (VN): 63
+- Number of VNs: 8
+- Number of Idle Multiplier Switches: 8
+
+Distribute Network: 
+- Number of unicast in weights: (504) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (63) (21) 
+- Number of multicast in inputs: (63) 
+- Size of unicast in inputs: (8) 
+- Number of access between distribute switches: 70358400
+- Normalized energy of distribute network 7.03584e+07
+
+Reduce Network: 
+- Number of reduce operations: 1990983680
+- Number of access between reduce switches: 4014080000
+- Normalized energy of Reduce Network: 6.00506e+09 ( accessing RSs = 4.01408e+09, reduce operation = 1.99098e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2023096320
+- Number of register access of the multiplier switch: 2703482880
+- Number of forward access between multiplier switches: 1342709760
+- Normalized energy of Multiplier Network: 6.06929e+09 ( forward energy = 1.34271e+09, accessing local buffer in MS = 2.70348e+09, multiply operations = 2.0231e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected (single control step): 8
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 40320
+- Number of inputs read: 85048320
+- Number of outputs write: 32112640
+- Number of input data streams: 4014080
+- Number of weight data streams: 80
+- Normalized energy of accessing on-chip Scratchpad Memory: 9.3761e+08 ( SPM input read = 6.80387e+08, SPM weight read = 322560, SPM write = 2.56901e+08 )
+
+Performance: 
+- Number of control steps: 4014080
+- Runtime cycles: 4014400
+- Peak utilization rate in configuration 0 is: 0.984375
+- Average utilization rate in configuration 0 is: 0.9
+
+Code Size: 
+- Code size is: 192
+
+-------------------------------------------------------------------
+Configuration 1
+
+Mapping: - Size of Virtual Neuron (VN): 10
+- Number of VNs: 51
+- Number of Idle Multiplier Switches: 2
+
+Distribute Network: 
+- Number of unicast in weights: (0) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (510) 
+- Number of multicast in inputs: (0) 
+- Size of unicast in inputs: (0) 
+- Number of access between distribute switches: 289013940
+- Normalized energy of distribute network 2.89014e+08
+
+Reduce Network: 
+- Number of reduce operations: 28901394
+- Number of access between reduce switches: 64225320
+- Normalized energy of Reduce Network: 9.31267e+07 ( accessing RSs = 6.42253e+07, reduce operation = 2.89014e+07 )
+
+Multiplier Network: 
+- Number of multiplications: 0
+- Number of register access of the multiplier switch: 32112660
+- Number of forward access between multiplier switches: 0
+- Normalized energy of Multiplier Network: 3.21127e+07 ( forward energy = 0, accessing local buffer in MS = 3.21127e+07, multiply operations = 0 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected: 0
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 0
+- Number of inputs read: 32112660
+- Number of outputs write: 3211266
+- Number of input data streams: 62966
+- Number of weight data streams: 0
+- Normalized energy of accessing on-chip Scratchpad Memory: 2.82591e+08 ( SPM input read = 2.56901e+08, SPM weight read = 0, SPM write = 2.56901e+07 )
+
+Performance: 
+- Number of control steps: 62966
+- Runtime cycles: 251864
+- Peak utilization rate in configuration 1 is: 0
+- Average utilization rate in configuration 1 is: 0.996093
+
+Code Size: 
+- Code size is: 24
+
+-------------------------------------------------------------------
+Total Configurations: 
+
+Mapping: Distribute Network: 
+- Number of access between distribute switches: 359372340
+- Normalized energy of distribute network 3.59372e+08
+
+Reduce Network: 
+- Number of reduce operations: 2019885074
+- Number of access between reduce switches: 4078305320
+- Normalized energy of Reduce Network: 6.09819e+09 ( accessing RSs = 4.07831e+09, reduce operation = 2.01989e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2023096320
+- Number of register access of the multiplier switch: 2735595540
+- Number of forward access between multiplier switches: 1342709760
+- Normalized energy of Multiplier Network: 6.1014e+09 ( forward energy = 1.34271e+09, accessing local buffer in MS = 2.7356e+09, multiply operations = 2.0231e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 40320
+- Number of inputs read: 117160980
+- Number of outputs write: 35323906
+- Number of input data streams: 4077046
+- Number of weight data streams: 80
+- Normalized energy of accessing on-chip Scratchpad Memory: 1.2202e+09 ( SPM input read = 9.37288e+08, SPM weight read = 322560, SPM write = 2.82591e+08 )
+
+Performance: 
+- Number of control steps: 4077046
+- Runtime cycles: 4266264
+Code Size: 
+- Code size is: 216
+
+- Dram energy is: 9.54243e+08
+- Average utilization rate throughout the whole layer: 0.901484
+
+==================================================================
+Mapping Strategy 3: 
+Tile Size: <T_X = 3, T_Y = 3, T_C = 4, T_K = 14, T_N = 1, T_X' = 1, T_Y' = 1>
+Average utilization rate: 0.902439
+
+-------------------------------------------------------------------
+Configuration 0
+
+Mapping: - Size of Virtual Neuron (VN): 36
+- Number of VNs: 14
+- Number of Idle Multiplier Switches: 8
+
+Distribute Network: 
+- Number of unicast in weights: (504) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (36) (12) 
+- Number of multicast in inputs: (36) 
+- Size of unicast in inputs: (14) 
+- Number of access between distribute switches: 62939520
+- Normalized energy of distribute network 6.29395e+07
+
+Reduce Network: 
+- Number of reduce operations: 1966899200
+- Number of access between reduce switches: 4102389760
+- Normalized energy of Reduce Network: 6.06929e+09 ( accessing RSs = 4.10239e+09, reduce operation = 1.9669e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2023096320
+- Number of register access of the multiplier switch: 2703482880
+- Number of forward access between multiplier switches: 1342709760
+- Normalized energy of Multiplier Network: 6.06929e+09 ( forward energy = 1.34271e+09, accessing local buffer in MS = 2.70348e+09, multiply operations = 2.0231e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected (single control step): 14
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 40320
+- Number of inputs read: 48599040
+- Number of outputs write: 56197120
+- Number of input data streams: 4014080
+- Number of weight data streams: 80
+- Normalized energy of accessing on-chip Scratchpad Memory: 8.38692e+08 ( SPM input read = 3.88792e+08, SPM weight read = 322560, SPM write = 4.49577e+08 )
+
+Performance: 
+- Number of control steps: 4014080
+- Runtime cycles: 4014400
+- Peak utilization rate in configuration 0 is: 0.984375
+- Average utilization rate in configuration 0 is: 0.9
+
+Code Size: 
+- Code size is: 120
+
+-------------------------------------------------------------------
+Configuration 1
+
+Mapping: - Size of Virtual Neuron (VN): 16
+- Number of VNs: 32
+- Number of Idle Multiplier Switches: 0
+
+Distribute Network: 
+- Number of unicast in weights: (0) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (512) 
+- Number of multicast in inputs: (0) 
+- Size of unicast in inputs: (0) 
+- Number of access between distribute switches: 462422016
+- Normalized energy of distribute network 4.62422e+08
+
+Reduce Network: 
+- Number of reduce operations: 48168960
+- Number of access between reduce switches: 96337920
+- Normalized energy of Reduce Network: 1.44507e+08 ( accessing RSs = 9.63379e+07, reduce operation = 4.8169e+07 )
+
+Multiplier Network: 
+- Number of multiplications: 0
+- Number of register access of the multiplier switch: 51380224
+- Number of forward access between multiplier switches: 0
+- Normalized energy of Multiplier Network: 5.13802e+07 ( forward energy = 0, accessing local buffer in MS = 5.13802e+07, multiply operations = 0 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected: 0
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 0
+- Number of inputs read: 51380224
+- Number of outputs write: 3211264
+- Number of input data streams: 100352
+- Number of weight data streams: 0
+- Normalized energy of accessing on-chip Scratchpad Memory: 4.36732e+08 ( SPM input read = 4.11042e+08, SPM weight read = 0, SPM write = 2.56901e+07 )
+
+Performance: 
+- Number of control steps: 100352
+- Runtime cycles: 401408
+- Peak utilization rate in configuration 1 is: 1
+- Average utilization rate in configuration 1 is: 1
+
+Code Size: 
+- Code size is: 24
+
+-------------------------------------------------------------------
+Total Configurations: 
+
+Mapping: Distribute Network: 
+- Number of access between distribute switches: 525361536
+- Normalized energy of distribute network 5.25362e+08
+
+Reduce Network: 
+- Number of reduce operations: 2015068160
+- Number of access between reduce switches: 4198727680
+- Normalized energy of Reduce Network: 6.2138e+09 ( accessing RSs = 4.19873e+09, reduce operation = 2.01507e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2023096320
+- Number of register access of the multiplier switch: 2754863104
+- Number of forward access between multiplier switches: 1342709760
+- Normalized energy of Multiplier Network: 6.12067e+09 ( forward energy = 1.34271e+09, accessing local buffer in MS = 2.75486e+09, multiply operations = 2.0231e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 40320
+- Number of inputs read: 99979264
+- Number of outputs write: 59408384
+- Number of input data streams: 4114432
+- Number of weight data streams: 80
+- Normalized energy of accessing on-chip Scratchpad Memory: 1.27542e+09 ( SPM input read = 7.99834e+08, SPM weight read = 322560, SPM write = 4.75267e+08 )
+
+Performance: 
+- Number of control steps: 4114432
+- Runtime cycles: 4415808
+Code Size: 
+- Code size is: 144
+
+- Dram energy is: 1.47447e+09
+- Average utilization rate throughout the whole layer: 0.902439
+
+==================================================================
+Mapping Strategy 4: 
+Tile Size: <T_X = 3, T_Y = 3, T_C = 28, T_K = 2, T_N = 1, T_X' = 1, T_Y' = 1>
+Average utilization rate: 0.750961
+
+-------------------------------------------------------------------
+Configuration 0
+
+Mapping: - Size of Virtual Neuron (VN): 252
+- Number of VNs: 2
+- Number of Idle Multiplier Switches: 8
+
+Distribute Network: 
+- Number of unicast in weights: (504) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (252) (84) 
+- Number of multicast in inputs: (252) 
+- Size of unicast in inputs: (2) 
+- Number of access between distribute switches: 97977600
+- Normalized energy of distribute network 9.79776e+07
+
+Reduce Network: 
+- Number of reduce operations: 2418081792
+- Number of access between reduce switches: 4845797376
+- Normalized energy of Reduce Network: 7.26388e+09 ( accessing RSs = 4.8458e+09, reduce operation = 2.41808e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2427715584
+- Number of register access of the multiplier switch: 3244179456
+- Number of forward access between multiplier switches: 1611251712
+- Normalized energy of Multiplier Network: 7.28315e+09 ( forward energy = 1.61125e+09, accessing local buffer in MS = 3.24418e+09, multiply operations = 2.42772e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected (single control step): 2
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 48384
+- Number of inputs read: 408231936
+- Number of outputs write: 9633792
+- Number of input data streams: 4816896
+- Number of weight data streams: 96
+- Normalized energy of accessing on-chip Scratchpad Memory: 3.34331e+09 ( SPM input read = 3.26586e+09, SPM weight read = 387072, SPM write = 7.70703e+07 )
+
+Performance: 
+- Number of control steps: 4816896
+- Runtime cycles: 4838784
+- Peak utilization rate in configuration 0 is: 0.984375
+- Average utilization rate in configuration 0 is: 0.75
+
+Code Size: 
+- Code size is: 696
+
+-------------------------------------------------------------------
+Configuration 1
+
+Mapping: - Size of Virtual Neuron (VN): 3
+- Number of VNs: 170
+- Number of Idle Multiplier Switches: 2
+
+Distribute Network: 
+- Number of unicast in weights: (0) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (510) 
+- Number of multicast in inputs: (0) 
+- Size of unicast in inputs: (0) 
+- Number of access between distribute switches: 86705100
+- Normalized energy of distribute network 8.67051e+07
+
+Reduce Network: 
+- Number of reduce operations: 6422600
+- Number of access between reduce switches: 16056500
+- Normalized energy of Reduce Network: 2.24791e+07 ( accessing RSs = 1.60565e+07, reduce operation = 6.4226e+06 )
+
+Multiplier Network: 
+- Number of multiplications: 0
+- Number of register access of the multiplier switch: 9633900
+- Number of forward access between multiplier switches: 0
+- Normalized energy of Multiplier Network: 9.6339e+06 ( forward energy = 0, accessing local buffer in MS = 9.6339e+06, multiply operations = 0 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected: 0
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 0
+- Number of inputs read: 9633900
+- Number of outputs write: 3211300
+- Number of input data streams: 18890
+- Number of weight data streams: 0
+- Normalized energy of accessing on-chip Scratchpad Memory: 1.02762e+08 ( SPM input read = 7.70712e+07, SPM weight read = 0, SPM write = 2.56904e+07 )
+
+Performance: 
+- Number of control steps: 18890
+- Runtime cycles: 75560
+- Peak utilization rate in configuration 1 is: 0
+- Average utilization rate in configuration 1 is: 0.996083
+
+Code Size: 
+- Code size is: 24
+
+-------------------------------------------------------------------
+Total Configurations: 
+
+Mapping: Distribute Network: 
+- Number of access between distribute switches: 184682700
+- Normalized energy of distribute network 1.84683e+08
+
+Reduce Network: 
+- Number of reduce operations: 2424504392
+- Number of access between reduce switches: 4861853876
+- Normalized energy of Reduce Network: 7.28636e+09 ( accessing RSs = 4.86185e+09, reduce operation = 2.4245e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2427715584
+- Number of register access of the multiplier switch: 3253813356
+- Number of forward access between multiplier switches: 1611251712
+- Normalized energy of Multiplier Network: 7.29278e+09 ( forward energy = 1.61125e+09, accessing local buffer in MS = 3.25381e+09, multiply operations = 2.42772e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 48384
+- Number of inputs read: 417865836
+- Number of outputs write: 12845092
+- Number of input data streams: 4835786
+- Number of weight data streams: 96
+- Normalized energy of accessing on-chip Scratchpad Memory: 3.44607e+09 ( SPM input read = 3.34293e+09, SPM weight read = 387072, SPM write = 1.02761e+08 )
+
+Performance: 
+- Number of control steps: 4835786
+- Runtime cycles: 4914344
+Code Size: 
+- Code size is: 720
+
+- Dram energy is: 3.47314e+08
+- Average utilization rate throughout the whole layer: 0.750961
+
+==================================================================
+Mapping Strategy 5: 
+Tile Size: <T_X = 3, T_Y = 3, T_C = 2, T_K = 28, T_N = 1, T_X' = 1, T_Y' = 1>
+Average utilization rate: 0.76
+
+-------------------------------------------------------------------
+Configuration 0
+
+Mapping: - Size of Virtual Neuron (VN): 18
+- Number of VNs: 28
+- Number of Idle Multiplier Switches: 8
+
+Distribute Network: 
+- Number of unicast in weights: (504) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (18) (6) 
+- Number of multicast in inputs: (18) 
+- Size of unicast in inputs: (28) 
+- Number of access between distribute switches: 65076480
+- Normalized energy of distribute network 6.50765e+07
+
+Reduce Network: 
+- Number of reduce operations: 2292842496
+- Number of access between reduce switches: 4990304256
+- Normalized energy of Reduce Network: 7.28315e+09 ( accessing RSs = 4.9903e+09, reduce operation = 2.29284e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2427715584
+- Number of register access of the multiplier switch: 3244179456
+- Number of forward access between multiplier switches: 1611251712
+- Normalized energy of Multiplier Network: 7.28315e+09 ( forward energy = 1.61125e+09, accessing local buffer in MS = 3.24418e+09, multiply operations = 2.42772e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected (single control step): 28
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 48384
+- Number of inputs read: 29159424
+- Number of outputs write: 134873088
+- Number of input data streams: 4816896
+- Number of weight data streams: 96
+- Normalized energy of accessing on-chip Scratchpad Memory: 1.31265e+09 ( SPM input read = 2.33275e+08, SPM weight read = 387072, SPM write = 1.07898e+09 )
+
+Performance: 
+- Number of control steps: 4816896
+- Runtime cycles: 4817280
+- Peak utilization rate in configuration 0 is: 0.984375
+- Average utilization rate in configuration 0 is: 0.75
+
+Code Size: 
+- Code size is: 72
+
+-------------------------------------------------------------------
+Configuration 1
+
+Mapping: - Size of Virtual Neuron (VN): 32
+- Number of VNs: 16
+- Number of Idle Multiplier Switches: 0
+
+Distribute Network: 
+- Number of unicast in weights: (0) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (512) 
+- Number of multicast in inputs: (0) 
+- Size of unicast in inputs: (0) 
+- Number of access between distribute switches: 924844032
+- Normalized energy of distribute network 9.24844e+08
+
+Reduce Network: 
+- Number of reduce operations: 99549184
+- Number of access between reduce switches: 199098368
+- Normalized energy of Reduce Network: 2.98648e+08 ( accessing RSs = 1.99098e+08, reduce operation = 9.95492e+07 )
+
+Multiplier Network: 
+- Number of multiplications: 0
+- Number of register access of the multiplier switch: 102760448
+- Number of forward access between multiplier switches: 0
+- Normalized energy of Multiplier Network: 1.0276e+08 ( forward energy = 0, accessing local buffer in MS = 1.0276e+08, multiply operations = 0 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected: 0
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 0
+- Number of inputs read: 102760448
+- Number of outputs write: 3211264
+- Number of input data streams: 200704
+- Number of weight data streams: 0
+- Normalized energy of accessing on-chip Scratchpad Memory: 8.47774e+08 ( SPM input read = 8.22084e+08, SPM weight read = 0, SPM write = 2.56901e+07 )
+
+Performance: 
+- Number of control steps: 200704
+- Runtime cycles: 802816
+- Peak utilization rate in configuration 1 is: 1
+- Average utilization rate in configuration 1 is: 1
+
+Code Size: 
+- Code size is: 24
+
+-------------------------------------------------------------------
+Total Configurations: 
+
+Mapping: Distribute Network: 
+- Number of access between distribute switches: 989920512
+- Normalized energy of distribute network 9.89921e+08
+
+Reduce Network: 
+- Number of reduce operations: 2392391680
+- Number of access between reduce switches: 5189402624
+- Normalized energy of Reduce Network: 7.58179e+09 ( accessing RSs = 5.1894e+09, reduce operation = 2.39239e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 2427715584
+- Number of register access of the multiplier switch: 3346939904
+- Number of forward access between multiplier switches: 1611251712
+- Normalized energy of Multiplier Network: 7.38591e+09 ( forward energy = 1.61125e+09, accessing local buffer in MS = 3.34694e+09, multiply operations = 2.42772e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 48384
+- Number of inputs read: 131919872
+- Number of outputs write: 138084352
+- Number of input data streams: 5017600
+- Number of weight data streams: 96
+- Normalized energy of accessing on-chip Scratchpad Memory: 2.16042e+09 ( SPM input read = 1.05536e+09, SPM weight read = 387072, SPM write = 1.10467e+09 )
+
+Performance: 
+- Number of control steps: 5017600
+- Runtime cycles: 5620096
+Code Size: 
+- Code size is: 96
+
+- Dram energy is: 2.86173e+09
+- Average utilization rate throughout the whole layer: 0.76
+
+==================================================================
+Mapping Strategy 6: 
+Tile Size: <T_X = 3, T_Y = 3, T_C = 1, T_K = 56, T_N = 1, T_X' = 1, T_Y' = 1>
+Average utilization rate: 0.588235
+
+-------------------------------------------------------------------
+Configuration 0
+
+Mapping: - Size of Virtual Neuron (VN): 9
+- Number of VNs: 56
+- Number of Idle Multiplier Switches: 8
+
+Distribute Network: 
+- Number of unicast in weights: (504) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (9) (3) 
+- Number of multicast in inputs: (9) 
+- Size of unicast in inputs: (56) 
+- Number of access between distribute switches: 72576000
+- Normalized energy of distribute network 7.2576e+07
+
+Reduce Network: 
+- Number of reduce operations: 2877292544
+- Number of access between reduce switches: 6833569792
+- Normalized energy of Reduce Network: 9.71086e+09 ( accessing RSs = 6.83357e+09, reduce operation = 2.87729e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 3236954112
+- Number of register access of the multiplier switch: 4325572608
+- Number of forward access between multiplier switches: 2148335616
+- Normalized energy of Multiplier Network: 9.71086e+09 ( forward energy = 2.14834e+09, accessing local buffer in MS = 4.32557e+09, multiply operations = 3.23695e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected (single control step): 56
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 64512
+- Number of inputs read: 19439616
+- Number of outputs write: 359661568
+- Number of input data streams: 6422528
+- Number of weight data streams: 128
+- Normalized energy of accessing on-chip Scratchpad Memory: 3.03333e+09 ( SPM input read = 1.55517e+08, SPM weight read = 516096, SPM write = 2.87729e+09 )
+
+Performance: 
+- Number of control steps: 6422528
+- Runtime cycles: 6423040
+- Peak utilization rate in configuration 0 is: 0.984375
+- Average utilization rate in configuration 0 is: 0.5625
+
+Code Size: 
+- Code size is: 48
+
+-------------------------------------------------------------------
+Configuration 1
+
+Mapping: - Size of Virtual Neuron (VN): 64
+- Number of VNs: 8
+- Number of Idle Multiplier Switches: 0
+
+Distribute Network: 
+- Number of unicast in weights: (0) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (512) 
+- Number of multicast in inputs: (0) 
+- Size of unicast in inputs: (0) 
+- Number of access between distribute switches: 1849688064
+- Normalized energy of distribute network 1.84969e+09
+
+Reduce Network: 
+- Number of reduce operations: 202309632
+- Number of access between reduce switches: 404619264
+- Normalized energy of Reduce Network: 6.06929e+08 ( accessing RSs = 4.04619e+08, reduce operation = 2.0231e+08 )
+
+Multiplier Network: 
+- Number of multiplications: 0
+- Number of register access of the multiplier switch: 205520896
+- Number of forward access between multiplier switches: 0
+- Normalized energy of Multiplier Network: 2.05521e+08 ( forward energy = 0, accessing local buffer in MS = 2.05521e+08, multiply operations = 0 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected: 0
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 0
+- Number of inputs read: 205520896
+- Number of outputs write: 3211264
+- Number of input data streams: 401408
+- Number of weight data streams: 0
+- Normalized energy of accessing on-chip Scratchpad Memory: 1.66986e+09 ( SPM input read = 1.64417e+09, SPM weight read = 0, SPM write = 2.56901e+07 )
+
+Performance: 
+- Number of control steps: 401408
+- Runtime cycles: 1605632
+- Peak utilization rate in configuration 1 is: 1
+- Average utilization rate in configuration 1 is: 1
+
+Code Size: 
+- Code size is: 24
+
+-------------------------------------------------------------------
+Total Configurations: 
+
+Mapping: Distribute Network: 
+- Number of access between distribute switches: 1922264064
+- Normalized energy of distribute network 1.92226e+09
+
+Reduce Network: 
+- Number of reduce operations: 3079602176
+- Number of access between reduce switches: 7238189056
+- Normalized energy of Reduce Network: 1.03178e+10 ( accessing RSs = 7.23819e+09, reduce operation = 3.0796e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 3236954112
+- Number of register access of the multiplier switch: 4531093504
+- Number of forward access between multiplier switches: 2148335616
+- Normalized energy of Multiplier Network: 9.91638e+09 ( forward energy = 2.14834e+09, accessing local buffer in MS = 4.53109e+09, multiply operations = 3.23695e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 64512
+- Number of inputs read: 224960512
+- Number of outputs write: 362872832
+- Number of input data streams: 6823936
+- Number of weight data streams: 128
+- Normalized energy of accessing on-chip Scratchpad Memory: 4.70318e+09 ( SPM input read = 1.79968e+09, SPM weight read = 516096, SPM write = 2.90298e+09 )
+
+Performance: 
+- Number of control steps: 6823936
+- Runtime cycles: 8028672
+Code Size: 
+- Code size is: 72
+
+- Dram energy is: 5.63627e+09
+- Average utilization rate throughout the whole layer: 0.588235
+
+==================================================================
+Mapping Strategy 7: 
+Tile Size: <T_X = 3, T_Y = 3, T_C = 56, T_K = 1, T_N = 1, T_X' = 1, T_Y' = 1>
+Average utilization rate: 0.563353
+
+-------------------------------------------------------------------
+Configuration 0
+
+Mapping: - Size of Virtual Neuron (VN): 504
+- Number of VNs: 1
+- Number of Idle Multiplier Switches: 8
+
+Distribute Network: 
+- Number of unicast in weights: (504) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (504) (168) 
+- Number of multicast in inputs: (504) 
+- Size of unicast in inputs: (1) 
+- Number of access between distribute switches: 130636800
+- Normalized energy of distribute network 1.30637e+08
+
+Reduce Network: 
+- Number of reduce operations: 3230531584
+- Number of access between reduce switches: 6467485696
+- Normalized energy of Reduce Network: 9.69802e+09 ( accessing RSs = 6.46749e+09, reduce operation = 3.23053e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 3236954112
+- Number of register access of the multiplier switch: 4325572608
+- Number of forward access between multiplier switches: 2148335616
+- Normalized energy of Multiplier Network: 9.71086e+09 ( forward energy = 2.14834e+09, accessing local buffer in MS = 4.32557e+09, multiply operations = 3.23695e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected (single control step): 1
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 64512
+- Number of inputs read: 1088618496
+- Number of outputs write: 6422528
+- Number of input data streams: 6422528
+- Number of weight data streams: 128
+- Normalized energy of accessing on-chip Scratchpad Memory: 8.76084e+09 ( SPM input read = 8.70895e+09, SPM weight read = 516096, SPM write = 5.13802e+07 )
+
+Performance: 
+- Number of control steps: 6422528
+- Runtime cycles: 12902912
+- Peak utilization rate in configuration 0 is: 0.984375
+- Average utilization rate in configuration 0 is: 0.5625
+
+Code Size: 
+- Code size is: 1368
+
+-------------------------------------------------------------------
+Configuration 1
+
+Mapping: - Size of Virtual Neuron (VN): 2
+- Number of VNs: 256
+- Number of Idle Multiplier Switches: 0
+
+Distribute Network: 
+- Number of unicast in weights: (0) 
+- Number of multicast in weights: (0) 
+- Size of multicast in weights: (0) 
+- Number of unicast in inputs: (512) 
+- Number of multicast in inputs: (0) 
+- Size of unicast in inputs: (0) 
+- Number of access between distribute switches: 57802752
+- Normalized energy of distribute network 5.78028e+07
+
+Reduce Network: 
+- Number of reduce operations: 3211264
+- Number of access between reduce switches: 6422528
+- Normalized energy of Reduce Network: 9.63379e+06 ( accessing RSs = 6.42253e+06, reduce operation = 3.21126e+06 )
+
+Multiplier Network: 
+- Number of multiplications: 0
+- Number of register access of the multiplier switch: 6422528
+- Number of forward access between multiplier switches: 0
+- Normalized energy of Multiplier Network: 6.42253e+06 ( forward energy = 0, accessing local buffer in MS = 6.42253e+06, multiply operations = 0 )
+
+Virtual Neuron Address Table (VNAT): 
+- Number of outputs expected: 0
+
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 0
+- Number of inputs read: 6422528
+- Number of outputs write: 3211264
+- Number of input data streams: 12544
+- Number of weight data streams: 0
+- Normalized energy of accessing on-chip Scratchpad Memory: 7.70703e+07 ( SPM input read = 5.13802e+07, SPM weight read = 0, SPM write = 2.56901e+07 )
+
+Performance: 
+- Number of control steps: 12544
+- Runtime cycles: 50176
+- Peak utilization rate in configuration 1 is: 1
+- Average utilization rate in configuration 1 is: 1
+
+Code Size: 
+- Code size is: 24
+
+-------------------------------------------------------------------
+Total Configurations: 
+
+Mapping: Distribute Network: 
+- Number of access between distribute switches: 188439552
+- Normalized energy of distribute network 1.8844e+08
+
+Reduce Network: 
+- Number of reduce operations: 3233742848
+- Number of access between reduce switches: 6473908224
+- Normalized energy of Reduce Network: 9.70765e+09 ( accessing RSs = 6.47391e+09, reduce operation = 3.23374e+09 )
+
+Multiplier Network: 
+- Number of multiplications: 3236954112
+- Number of register access of the multiplier switch: 4331995136
+- Number of forward access between multiplier switches: 2148335616
+- Normalized energy of Multiplier Network: 9.71728e+09 ( forward energy = 2.14834e+09, accessing local buffer in MS = 4.332e+09, multiply operations = 3.23695e+09 )
+
+Virtual Neuron Address Table (VNAT): 
+On-chip Scratchpad memory (Prefetch buffer): 
+- Number of weights read: 64512
+- Number of inputs read: 1095041024
+- Number of outputs write: 9633792
+- Number of input data streams: 6435072
+- Number of weight data streams: 128
+- Normalized energy of accessing on-chip Scratchpad Memory: 8.83791e+09 ( SPM input read = 8.76033e+09, SPM weight read = 516096, SPM write = 7.70703e+07 )
+
+Performance: 
+- Number of control steps: 6435072
+- Runtime cycles: 12953088
+Code Size: 
+- Code size is: 1392
+
+- Dram energy is: 2.6061e+08
+- Average utilization rate throughout the whole layer: 0.563353
+

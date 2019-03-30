@@ -1,0 +1,58 @@
+This file is created in 2018/09/25 to record the significant change in relative class organization.
+
+1. Class revise in PIISACNNAnalyzer class:
+
+1) Combine wirteProfile and writeRunandEnergy function into one and change there arguments from
+
+    void writeProfile(std::ofstream& profile, std::vector<std::pair<int, double> > configinfo, double onchip,
+                      std::vector<double> partialsum, int kernelch, int kernelfil, std::vector<int> cycleinfo)
+
+    void writeRunandEnergy(std::ofstream& profile, std::vector<int> realcycle, std::vector<double> dsn_eng, std::vector<double> msn_eng,
+                           std::vector<double> rsn_eng, std::vector<double> spm_eng, double dram_eng)
+
+to void writeProfile(MappingStrategy*);
+
+2) revise the output format to:
+
+    Output File Should specify:
+    Mapping:
+    - Size of VN: <k_x, k_y, c>
+    - Number of VNs:
+    - Number of Idle MS:
+
+    DN:
+    - number of unicasts for weights:
+    - number of multicasts for weights:
+    - size of multicast for weights: <effectively number of VNs>
+    - number of unicasts for inputs:
+    - number of multicasts for inputs:
+    - size of multicast for inputs:
+    [Note: number of weights read from SRAM = number of unicast for weights + number of multicast for weights. Similarly for inputs]
+
+    RN:
+    - number of additons
+    - number of reductions (i.e., number of unique outputs generated)
+
+    MN:
+    - number of multiplications
+    - number of local forwards
+
+    VNAT:
+    - number of outputs expected: <calculate theoretically using DNN params)
+    - number of outputs received:   --> this will validate that the compiler is correct
+
+    Prefetch Buffer
+    - number of weights read: <should be equal to number of unicast + number of multicast in DN>
+    - number of inputs read:
+    - number of outputs written:
+
+    Performance:
+    - Number of control steps:
+    - Total Runtime (cycles):
+
+    Code Size:
+    - ... (edited)
+
+3）Add void parseconfig(std::ifstream config) function to parse the information such as energy and instruction length of ISA inside the configuration file.
+
+4) Revise calculateDSN() function from

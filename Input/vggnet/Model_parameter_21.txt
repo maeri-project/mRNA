@@ -1,0 +1,31 @@
+Model_Name = vgg_model
+Layer_Type = FC
+Layer_Number = 21
+
+Input_parameter {
+  input_batch = 32
+  input_x = 4096
+  input_y = 1
+  input_channel = 1
+}
+
+Output_parameter {
+  output_batch = 32
+  output_x = 1000
+  output_y = 1
+  output_channel = 1
+}
+
+Weight_parameter {
+  weight_x = 4096
+  weight_y = 1000
+  weight_channel = 1
+  weight_number = 1
+  weight_stride = 1
+}
+
+Hidden_parameter {
+  hidden_x = 0
+  hidden_y = 0
+  hidden_channel = 0
+}

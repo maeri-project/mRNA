@@ -1,0 +1,31 @@
+Model_Name = vgg_model
+Layer_Type = CONV
+Layer_Number = 7
+
+Input_parameter {
+  input_batch = 32
+  input_x = 56
+  input_y = 56
+  input_channel = 128
+}
+
+Output_parameter {
+  output_batch = 32
+  output_x = 56
+  output_y = 56
+  output_channel = 256
+}
+
+Weight_parameter {
+  weight_x = 3
+  weight_y = 3
+  weight_channel = 128
+  weight_number = 256
+  weight_stride = 1
+}
+
+Hidden_parameter {
+  hidden_x = 0
+  hidden_y = 0
+  hidden_channel = 0
+}

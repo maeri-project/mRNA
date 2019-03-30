@@ -1,0 +1,31 @@
+Model_Name = vgg_model
+Layer_Type = MAXPOOL
+Layer_Number = 3
+
+Input_parameter {
+  input_batch = 32
+  input_x = 224
+  input_y = 224
+  input_channel = 64
+}
+
+Output_parameter {
+  output_batch = 32
+  output_x = 112
+  output_y = 112
+  output_channel = 64
+}
+
+Weight_parameter {
+  weight_x = 2
+  weight_y = 2
+  weight_channel = 1
+  weight_number = 1
+  weight_stride = 2
+}
+
+Hidden_parameter {
+  hidden_x = 0
+  hidden_y = 0
+  hidden_channel = 0
+}

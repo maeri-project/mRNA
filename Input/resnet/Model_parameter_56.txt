@@ -1,0 +1,31 @@
+Model_Name = resnet
+Layer_Type = CONV
+Layer_Number = 56
+
+Input_parameter {
+  input_batch = 10
+  input_x = 25
+  input_y = 25
+  input_channel = 40
+}
+
+Output_parameter {
+  output_batch = 10
+  output_x = 25
+  output_y = 25
+  output_channel = 40
+}
+
+Weight_parameter {
+  weight_x = 3
+  weight_y = 3
+  weight_channel = 40
+  weight_number = 40
+  weight_stride = 1
+}
+
+Hidden_parameter {
+  hidden_x = 0
+  hidden_y = 0
+  hidden_channel = 0
+}

@@ -1,0 +1,31 @@
+Model_Name = alexnet
+Layer_Type = CONV
+Layer_Number = 6
+
+Input_parameter {
+  input_batch = 32
+  input_x = 13
+  input_y = 13
+  input_channel = 256
+}
+
+Output_parameter {
+  output_batch = 32
+  output_x = 13
+  output_y = 13
+  output_channel = 384
+}
+
+Weight_parameter {
+  weight_x = 3
+  weight_y = 3
+  weight_channel = 256
+  weight_number = 384
+  weight_stride = 1
+}
+
+Hidden_parameter {
+  hidden_x = 0
+  hidden_y = 0
+  hidden_channel = 0
+}
