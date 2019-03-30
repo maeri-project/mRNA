@@ -23,11 +23,11 @@ Accelerator, ISPASS 2019
 3. Install instruction:
 
 ```
-	Enter into mRNA folder
-	mkdir build
-	cd build
-	cmake ../
-	make
+1. Enter into mRNA folder
+2. mkdir build
+3. cd build
+4. cmake ../
+5. make
 ```
 
 ## Command Guide
@@ -46,20 +46,22 @@ The **input** folder contains all the layer representations for four DNN Model (
 You can use **--help** command to check all the descriptions of each command
 
 ```
-	build/MAERI_Mapper --help
+build/MAERI_Mapper --help
 ```
 If you want to understand the impact of mapping over MAERI, example below is the command of mapping a convolutional layer of alexnet, and generating the profile result for this layer
 
 ```
-	cd mNRA/input/alexnet
-	../../build/MAERI_Mapper -model_para="Model_parameter_4.txt" -show_energy 
-	-config_file="Config_file.txt" -num_ms=256 -dn_bw=128 -rn_bw=256 -performance
+1. cd mNRA/input/alexnet
+2. ../../build/MAERI_Mapper -model_para="Model_parameter_4.txt" -show_energy 
+                            -config_file="Config_file.txt" -num_ms=256 -dn_bw=128 -rn_bw=256 
+                            -performance
 ```
 If you want to generate the configuration, you should add **-genconfig** option in the commmand.
 
 ```
-	../../build/MAERI_Mapper -model_para="Model_parameter_2.txt" -show_energy 
-	-config_file="Config_file.txt" -dn_bw=128 -rn_bw=256 –performance -genconfig
+../../build/MAERI_Mapper -model_para="Model_parameter_2.txt" -show_energy 
+                         -config_file="Config_file.txt" -dn_bw=128 -rn_bw=256 
+                         –performance -genconfig
 ```
 
 
