@@ -9,7 +9,7 @@ MAERI is a DNN Spatial Accelerator which is able to support flexible Dataflows. 
 
 1. Efficienctly search the optimal DNN mapping for MAERI
 2. Mapping space exploration tool for developers to understand the impact of mapping over MAERI
-3. Generate the Network configuration for MERI.
+3. Generate the Network configuration for MAERI.
 
 Detail implementation of mRNA can refer to ISPASS 2019 paper below.
 >Zhongyuan Zhao, Hyoukjun Kwon, Sachit Kuhar, Weiguang Sheng, Zhigang Mao, and Tushar Krishna, mRNA: Enabling Efficient Mapping Space Exploration for a Reconfigurable Neural
