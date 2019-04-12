@@ -1,0 +1,3 @@
+/Users/zhongyuan/software/mRNA/build/CMakeFiles/rebuild_cache.dir
+/Users/zhongyuan/software/mRNA/build/CMakeFiles/edit_cache.dir
+/Users/zhongyuan/software/mRNA/build/CMakeFiles/MAERI_Mapper.dir

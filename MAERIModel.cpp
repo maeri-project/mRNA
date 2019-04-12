@@ -58,7 +58,7 @@ void Maeri::DrawNetwork(std::ofstream& profile) {
     DSwitch* ds = I->second;
     int level = levandnum.first;
     int number  = levandnum.second;
-    profile << "\tNode" << ds << "[shape=record,";
+    profile << "\tNode" << ds << "[shape=circle, style=filled, width=.3, color=green,";
     profile << "label=\"{" << "DS L" << level << "_N" << number << "}\"];\n";
     DSwitch* ldst = ds->getPhyLOutput();
     DSwitch* rdst = ds->getPhyROutput();
@@ -73,7 +73,7 @@ void Maeri::DrawNetwork(std::ofstream& profile) {
       std::vector<MSwitch*>::iterator iter = std::find(recordms.begin(), recordms.end(), lms);
       if(iter == recordms.end()) {
         int msnum = lms->getmsnum();
-        profile << "\tNode" << lms << "[shape=record,";
+        profile << "\tNode" << lms << "[shape=box, style=filled, color=red,";
         profile << "label=\"{" << "MS " << msnum << "}\"];\n";
         profile << "\tNode" << ds << " -> " << "Node" << lms << ";\n";
       }
@@ -90,12 +90,20 @@ void Maeri::DrawNetwork(std::ofstream& profile) {
       std::vector<MSwitch*>::iterator iter = std::find(recordms.begin(), recordms.end(), rms);
       if(iter == recordms.end()) {
         int msnum = rms->getmsnum();
-        profile << "\tNode" << rms << "[shape=record,";
+        profile << "\tNode" << rms << "[shape=record, style=filled, color=red,";
         profile << "label=\"{" << "MS_" << msnum << "}\"];\n";
         profile << "\tNode" << ds << " -> " << "Node" << rms << ";\n";
       }
     }
   }
+
+/*  profile << "\t{ rank=same; ";
+  for(int i = 0; i < pe_size; i++) {
+    MSwitch* ms = msnet->mswitchtable[i];
+    profile << "\"" << "Node" << ms << "\";";
+  }
+  profile << "}\n";
+*/
 
   for(int i = 0; i < pe_size; i++) {
     MSwitch* ms = msnet->mswitchtable[i];
@@ -103,7 +111,7 @@ void Maeri::DrawNetwork(std::ofstream& profile) {
     int rslev = rs->getrslev();
     int rsnum = rs->getrsnum();
     if(i % 2 == 0) {
-      profile << "\tNode" << rs << "[shape=record,";
+      profile << "\tNode" << rs << "[shape=box, style=filled, color=lightblue,";
       profile << "label=\"{" << "RS L" << rslev << "_N" << rsnum << "}\"];\n";
     }
     else {
@@ -112,11 +120,17 @@ void Maeri::DrawNetwork(std::ofstream& profile) {
         std::cerr << "MSwitch who has odd number should be connected to forwarder, please check the connectmsandrs function.";
       }
       int num = fwd->getfdnum();
-      profile << "\tNode" << fwd << "[shape=record,";
+      profile << "\tNode" << fwd << "[shape=circle, style=filled, color=orange,";
       profile << "label=\"{" << "FD " << num << "}\"];\n";
       profile << "\tNode" << ms << " -> " << "Node" << fwd << ";\n";
     }
     profile << "\tNode" << ms << " -> " << "Node" << rs << ";\n";
+
+    MSwitch* leftms = ms->getPhyMInput();
+    if(leftms) {
+      //profile << "\tedge [color=red];\n";
+      profile << "\tNode" << leftms << " -> " << "Node" << ms << ";\n";
+    }
   }
 
   for(std::map<std::pair<int, int>, RSwitch* >::iterator I = rsnet->rswitchtable.begin(), E = rsnet->rswitchtable.end(); I != E; I++) {
@@ -125,7 +139,7 @@ void Maeri::DrawNetwork(std::ofstream& profile) {
     int lev = levandnum.first;
     int num = levandnum.second;
     if(lev != maxlevel - 1) {
-      profile << "\tNode" << rs << "[shape=record,";
+      profile << "\tNode" << rs << "[shape=box, style=filled, color=lightblue,";
       profile << "label=\"{" << "RS L" << lev << "_N" << num << "}\"];\n";
     }
 
@@ -139,12 +153,21 @@ void Maeri::DrawNetwork(std::ofstream& profile) {
       if(rs->getPhyFOutput() != NULL) {
         Forwarder* fw = rs->getPhyFOutput();
         int fwdnum = fw->getfdnum();
-        profile << "\tNode" << fw << "[shape=record,";
+        profile << "\tNode" << fw << "[shape=circle, style=filled, color=orange,";
         profile << "label=\"{" << "FD " << fwdnum << "}\"];\n";
         profile << "\tNode" << rs << " -> " << "Node" << fw << ";\n";
       }
     }
   }
+
+  /*profile << "\t{ rank=same; ";
+  for(int i = 0; i < pe_size; i++) {
+    MSwitch* ms = msnet->mswitchtable[i];
+    profile << "\"" << "Node" << ms << "\";";
+  }
+  profile << "};\n";
+  */
+
 
   profile << "}\n}\n";
 }

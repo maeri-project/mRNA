@@ -1,7 +1,7 @@
 # mRNA: Efficienct mapping space exploration for Reconfigurable Neural Accelerator
 ## Introduction
 **mRNA** is a mapping space exploration tool for **MAERI**. 
-MAERI is a DNN Spatial Accelerator which is able to support flexible Dataflows. It aims at efficient mapping datalfows due to the diverse deep learning landscape. Detail of **MAERI** can refer to ASPLOS 2018 paper below:
+MAERI is a DNN Spatial Accelerator which is able to support flexible Dataflows. It aims at efficient mapping datalfows due to the diverse deep learning landscape. For the detail technique of **MAERI** can refer to ASPLOS 2018 paper below and for its code base, you can go to [here](https://github.com/georgia-tech-synergy-lab/maeri)
 
 >Hyoukjun Kwon, Ananda Samajdar, and Tushar Krishna, MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects, ASPLOS 2018
 
@@ -41,13 +41,21 @@ python3 network_parser.py #dnn_model#.py
 And all the output parameters of each layer for a DNN mdoel are located inside param folder. 
 The **input** folder contains all the layer representations for four DNN Model (alexnet, resnet, vggnet and rnn). We also provide the Tensorflow implementation so that you can try to generate the parameters of each layer for a specific model.  
 
-###Analyzer
+### Analyzer
 
 You can use **--help** command to check all the descriptions of each command
 
 ```
 build/MAERI_Mapper --help
+
 ```
+You can see the architecture of MAERI (32 MSes in this example) under different scales by typing command
+
+```
+build/MAERI_Mapper -show_maei num_ms=32
+
+```
+
 If you want to understand the impact of mapping over MAERI, example below is the command of mapping a convolutional layer of alexnet, and generating the profile result for this layer
 
 ```
@@ -63,5 +71,21 @@ If you want to generate the configuration, you should add **-genconfig** option 
                          -config_file="Config_file.txt" -dn_bw=128 -rn_bw=256 
                          –performance -genconfig
 ```
+
+### Output file
+The output file of mRNA is generated int the same path as the input file. The name scheme of the output profile file is as follows
+
+```
+DNN-#DNNModelName#-#Layer Type##Layer Number#_#MS Num#-#DSW#-#RSW#-#Opt Goal#.txt
+
+```
+The DSW and RSW represents the bandwidth of DS and RS Network. Example of outputfile is: 
+
+```
+DNN-GoogleNet-CONV1_MAERI-MS-256-DSW-128-RSW-256_Opt-performance.txt
+
+```
+
+
 
 

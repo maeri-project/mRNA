@@ -62,6 +62,7 @@ public:
   Forwarder* getPhyFOutput() { return forwd; }
   void setVNid(int id) { vn_id = id; }
   int getmsnum() { return ms_number; }
+  MSwitch* getPhyMInput() {return f_input; }
 };
 
 class MSNetwork{

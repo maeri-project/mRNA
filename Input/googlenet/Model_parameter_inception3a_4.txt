@@ -1,0 +1,31 @@
+Model_Name = GoogleNet
+Layer_Type = CONV
+Layer_Number = inception3a_4
+
+Input_parameter {
+  input_batch = 1
+  input_x = 28
+  input_y = 28
+  input_channel = 96
+}
+
+Output_parameter {
+  output_batch = 1
+  output_x = 28
+  output_y = 28
+  output_channel = 128
+}
+
+Weight_parameter {
+  weight_x = 3
+  weight_y = 3
+  weight_channel = 96
+  weight_number = 128
+  weight_stride = 1
+}
+
+Hidden_parameter {
+  hidden_x = 0
+  hidden_y = 0
+  hidden_channel = 0
+}

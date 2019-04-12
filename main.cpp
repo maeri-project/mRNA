@@ -13,14 +13,14 @@
 #include "Extern/gflags/windows/gflags.h"
 #endif
 
-DEFINE_bool(energy, false, "PIISA will generate the mapping stragy which has the least energy consumption.");
-DEFINE_bool(energy_efficiency, false, "PIISA will generate the mapping stragy which has the highest energy efficiency.");
-DEFINE_bool(performance, false, "PIISA will generate the mapping stragy which has the bset performance.");
+DEFINE_bool(energy, false, "MAERI Mapper will generate the mapping stragy which has the least energy consumption.");
+DEFINE_bool(energy_efficiency, false, "MAERI Mapper will generate the mapping stragy which has the highest energy efficiency.");
+DEFINE_bool(performance, false, "MAERI Mapper will generate the mapping stragy which has the bset performance.");
 DEFINE_bool(show_maeri, false, "Print the physical connection of the MAERI system.");
 DEFINE_bool(genconfig, false, "The configuration of the generated mapping.");
 //DEFINE_bool(cambricon, false, "Analyze cambricon.");
 //DEFINE_bool(systolic_array, false, "Analyze systolic array.");
-DEFINE_bool(show_energy, false, "PIISA will generate the normalized energy distribution.");
+DEFINE_bool(show_energy, false, "MAERI Mapper will generate the normalized energy distribution.");
 DEFINE_string(model_para, "Model_parameter.txt", "File path for parameters of the layer in DNN model.");
 //DEFINE_string(dsn_input, "DSN_input.txt", "File path for input data of the distribute network.");
 //DEFINE_string(dsn_output, "DSN_output.txt", "File path for output data of the distribute network.");
@@ -138,5 +138,3 @@ int main(int argc, char** argv) {
 
   return 0;
 }
-
-
