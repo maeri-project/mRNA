@@ -1,9 +1,13 @@
 # mRNA: Efficienct mapping space exploration for Reconfigurable Neural Accelerator
 ## Introduction
 **mRNA** is a mapping space exploration tool for **MAERI**. 
-MAERI is a DNN Spatial Accelerator which is able to support flexible Dataflows. It aims at efficient mapping datalfows due to the diverse deep learning landscape. Detail of **MAERI** can refer to ASPLOS 2018 paper below:
+MAERI is a DNN Spatial Accelerator which is able to support flexible Dataflows. It aims at efficient mapping datalfows due to the diverse deep learning landscape.
+
+Details of **MAERI** are in the ASPLOS 2018 paper below:
 
 >Hyoukjun Kwon, Ananda Samajdar, and Tushar Krishna, MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects, ASPLOS 2018
+
+The MAERI RTL (in Bluespec System Verilog) is available here: https://github.com/georgia-tech-synergy-lab/maeri
 
 **mRNA** generates the DNN Model which is implemented by Tensorflow, extract the necessary information from each layer and generate the optimal mapping strategy which map a layer onto MAERI. It has three basically functionalities:
 
@@ -11,9 +15,8 @@ MAERI is a DNN Spatial Accelerator which is able to support flexible Dataflows. 
 2. Mapping space exploration tool for developers to understand the impact of mapping over MAERI
 3. Generate the Network configuration for MAERI.
 
-Detail implementation of mRNA can refer to ISPASS 2019 paper below.
->Zhongyuan Zhao, Hyoukjun Kwon, Sachit Kuhar, Weiguang Sheng, Zhigang Mao, and Tushar Krishna, mRNA: Enabling Efficient Mapping Space Exploration for a Reconfigurable Neural
-Accelerator, ISPASS 2019
+Detailed implementation of mRNA is in the ISPASS 2019 paper below.
+>Zhongyuan Zhao, Hyoukjun Kwon, Sachit Kuhar, Weiguang Sheng, Zhigang Mao, and Tushar Krishna, mRNA: Enabling Efficient Mapping Space Exploration for a Reconfigurable Neural Accelerator, ISPASS 2019
 
 ## Tool Setup
 1. If you want to use Front-end Paser, you should have **python3**, **Tensorflow** environment and **lark-parser** package. The install information of **Tensorflow** goes to 
