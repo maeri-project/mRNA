@@ -1,0 +1,31 @@
+Model_Name = SqueezeNet
+Layer_Type = CONV
+Layer_Number = fire9_2
+
+Input_parameter {
+  input_batch = 1
+  input_x = 13
+  input_y = 13
+  input_channel = 64
+}
+
+Output_parameter {
+  output_batch = 1
+  output_x = 13
+  output_y = 13
+  output_channel = 256
+}
+
+Weight_parameter {
+  weight_x = 1
+  weight_y = 1
+  weight_channel = 64
+  weight_number = 256
+  weight_stride = 1
+}
+
+Hidden_parameter {
+  hidden_x = 0
+  hidden_y = 0
+  hidden_channel = 0
+}
