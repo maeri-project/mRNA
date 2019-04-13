@@ -30,6 +30,8 @@ Accelerator, ISPASS 2019
 5. make
 ```
 
+We aslo provide the executable file inside build folder so that you do not need to install gflags. However, if this does not work, you should install mRNA according to the afore mentioned steps.
+
 ## Command Guide
 
 ### Front-end Parser
