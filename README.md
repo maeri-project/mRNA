@@ -1,17 +1,17 @@
 # mRNA: Efficienct mapping space exploration for Reconfigurable Neural Accelerator
 ## Introduction
 **mRNA** is a mapping space exploration tool for **MAERI**. 
-MAERI is a DNN Spatial Accelerator which is able to support flexible Dataflows. It aims at efficient mapping datalfows due to the diverse deep learning landscape. For the detail technique of **MAERI** can refer to ASPLOS 2018 paper below and for its code base, you can go to [here](https://github.com/georgia-tech-synergy-lab/maeri)
+MAERI is a DNN Spatial Accelerator which is able to support flexible Dataflows. It aims at efficient mapping of datalfows emanating from the diverse deep learning landscape. For details of **MAERI**, please refer to the ASPLOS 2018 paper below and for its code base, you can go to [here](https://github.com/georgia-tech-synergy-lab/maeri)
 
 >Hyoukjun Kwon, Ananda Samajdar, and Tushar Krishna, MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects, ASPLOS 2018
 
-**mRNA** generates the DNN Model which is implemented by Tensorflow, extract the necessary information from each layer and generate the optimal mapping strategy which map a layer onto MAERI. It has three basically functionalities:
+**mRNA** generates the DNN Model which is implemented by Tensorflow, extracts the necessary information from each layer, and generate the optimal mapping strategy which map a layer onto MAERI. It has three basic functionalities:
 
 1. Efficienctly search the optimal DNN mapping for MAERI
 2. Mapping space exploration tool for developers to understand the impact of mapping over MAERI
-3. Generate the Network configuration for MERI.
+3. Generate the Network configuration(s) for MERI.
 
-Detail implementation of mRNA can refer to ISPASS 2019 paper below.
+For details on mRNA, please refer to the ISPASS 2019 paper below.
 >Zhongyuan Zhao, Hyoukjun Kwon, Sachit Kuhar, Weiguang Sheng, Zhigang Mao, and Tushar Krishna, mRNA: Enabling Efficient Mapping Space Exploration for a Reconfigurable Neural
 Accelerator, ISPASS 2019
 
@@ -24,13 +24,12 @@ Accelerator, ISPASS 2019
 
 ```
 1. Enter into mRNA folder
-2. mkdir build
-3. cd build
-4. cmake ../
-5. make
+2. cd build
+3. cmake ../
+4. make
 ```
 
-We aslo provide the executable file inside build folder so that you do not need to install gflags. However, if this does not work, you should install mRNA according to the afore mentioned steps.
+We also provide an executable file inside build folder so that you do not need to install gflags. However, if this does not work, you should install mRNA according to the afore mentioned steps.
 
 ## Command Guide
 
