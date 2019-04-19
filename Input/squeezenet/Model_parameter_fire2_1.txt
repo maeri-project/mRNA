@@ -1,6 +1,6 @@
 Model_Name = SqueezeNet
 Layer_Type = CONV
-Layer_Number = fire3_1
+Layer_Number = fire2_1
 
 Input_parameter {
   input_batch = 1
