@@ -26,6 +26,8 @@ To build MAERI_Mapper, you'll need:
 #### Building on Mac
 You'll first need to have [brew] installed on your Mac.
 ```bash
+git clone https://github.com/georgia-tech-synergy-lab/mRNA
+cd mRNA
 brew install pkg-config gflags
 make -j4
 make install
@@ -36,6 +38,8 @@ You can uninstall with ``make uninstall``
 #### Building on Linux
 The following instructions are for Ubuntu: use the correct package manager for your distro.
 ```bash
+git clone https://github.com/georgia-tech-synergy-lab/mRNA
+cd mRNA
 apt install libgflags-dev build-essential
 make -j4
 make install
