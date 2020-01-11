@@ -19,7 +19,6 @@ build:
 	mkdir build
 
 MAERI_Mapper: $(OBJ_FILES)
-	$(info    OBJ_FILES is $(OBJ_FILES))
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
