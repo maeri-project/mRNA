@@ -40,7 +40,7 @@ The following instructions are for Ubuntu: use the correct package manager for y
 ```bash
 git clone https://github.com/georgia-tech-synergy-lab/mRNA
 cd mRNA
-apt install libgflags-dev build-essential
+apt install libgflags-dev build-essential pkg-config
 make -j4
 make install
 ```
