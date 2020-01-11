@@ -15,36 +15,57 @@ For details on mRNA, please refer to the ISPASS 2019 paper below.
 >Zhongyuan Zhao, Hyoukjun Kwon, Sachit Kuhar, Weiguang Sheng, Zhigang Mao, and Tushar Krishna, mRNA: Enabling Efficient Mapping Space Exploration for a Reconfigurable Neural
 Accelerator, ISPASS 2019
 
-## Tool Setup
-1. If you want to use Front-end Paser, you should have **python3**, **Tensorflow** environment and **lark-parser** package. The install information of **Tensorflow** goes to 
-[here](https://tensorflow.google.cn/install). The install information of **lark-parser** package goes to 
-[here](https://github.com/lark-parser/lark). And the for information of installing **python3** please go to [here](https://www.python.org/downloads/).
-2. For using **mRNA**, you should install **Gglags**, the download and install information of **Gflags** please go to [here](https://github.com/gflags/gflags).
-3. Install instruction:
+## Installation
+### MAERI_Mapper
+To build MAERI_Mapper, you'll need:
+* [gflags]
+* pkg-config
+* make
+* gcc
 
+#### Building on Mac
+You'll first need to have [brew] installed on your Mac.
+```bash
+brew install pkg-config gflags
+make -j4
+make install
 ```
-1. Enter into mRNA folder
-2. cd build
-3. cmake ../
-4. make
+
+You can uninstall with ``make uninstall``
+
+#### Building on Linux
+The following instructions are for Ubuntu: use the correct package manager for your distro.
+```bash
+apt install libgflags-dev build-essential
+make -j4
+make install
 ```
 
-We also provide an executable file inside build folder so that you do not need to install gflags. However, if this does not work, you should install mRNA according to the afore mentioned steps.
+You can uninstall with ``make uninstall``
 
-## Command Guide
+#### Building on Windows
+Follow the instructions for [Building on Linux](#building-on-linux) with bash on windows.
+
 
 ### Front-end Parser
-The Front-end Parser get the DNN Model as input and output the information of each layer include DNN Model name, layer type and name. And four dimensional representation of input, weight, output and hidden unit (for LSTM). The command example is:
+1. If you want to use Front-end Parser, you should have python3, [Tensorflow] and [lark-parser]. 
+
+
+### Front-end Parser
+The Front-end Parser takes the DNN Model as input and outputs the information of each layer including the DNN Model name, layer type and name, and a four dimensional representation of input, weight, output and hidden unit (for LSTM). 
+
+Here is an example:
 
 ```
 python3 network_parser.py #dnn_model#.py
 ```
-And all the output parameters of each layer for a DNN mdoel are located inside param folder. 
-The **input** folder contains all the layer representations for four DNN Model (alexnet, resnet, vggnet and rnn). We also provide the Tensorflow implementation so that you can try to generate the parameters of each layer for a specific model.  
+All the output parameters of each layer for a DNN mdoel are located inside the param folder. 
+The **input** folder contains all the layer representations for four DNN Model (alexnet, resnet, vggnet and rnn). 
+We also provide a Tensorflow implementation so that you can try to generate the parameters of each layer for a specific model.  
 
 ### Analyzer
 
-You can use **--help** command to check all the descriptions of each command
+Use **--help** to get a list of all the commands.
 
 ```
 build/MAERI_Mapper --help
@@ -86,7 +107,7 @@ The DSW and RSW represents the bandwidth of DS and RS Network. Example of output
 DNN-GoogleNet-CONV1_MAERI-MS-256-DSW-128-RSW-256_Opt-performance.txt
 
 ```
-
-
-
-
+[Tensorflow]: https://tensorflow.google.cn/install
+[lark-parser]: https://github.com/lark-parser/lark
+[gflags]: https://github.com/gflags/gflags
+[brew]: https://brew.sh

@@ -1,17 +1,5 @@
 #include "Analyzer.h"
 #include <gflags/gflags.h>
-#ifndef LINUX
-#define LINUX
-#endif
-
-#define _USE_GFLAGS
-#ifdef _USE_GFLAGS
-
-#ifdef LINUX
-#include "Extern/gflags/linux/include/gflags.h"
-#else
-#include "Extern/gflags/windows/gflags.h"
-#endif
 
 DEFINE_bool(energy, false, "MAERI Mapper will generate the mapping stragy which has the least energy consumption.");
 DEFINE_bool(energy_efficiency, false, "MAERI Mapper will generate the mapping stragy which has the highest energy efficiency.");
@@ -29,19 +17,14 @@ DEFINE_int32(num_ms, 256, "Specify the number of multiplier switches in MAERI sy
 DEFINE_int32(dn_bw, 256, "Specify the bandwidth of the distribute network.");
 DEFINE_int32(rn_bw, 256, "Specify the bandwidth of the reduce network.");
 
-#endif
+//#endif
 
 int main(int argc, char** argv) {
 
   std::string opt;
   OptGoal opt_goal = all;
   opt = "all";
-#ifdef _USE_GFLAGS
-  #ifdef LINUX
-    gflags::ParseCommandLineFlags(&argc, &argv, true);
-  #else
-    google::ParseCommandLineFlags(&argc, &argv, true);
-  #endif
+  google::ParseCommandLineFlags(&argc, &argv, true);
 
   if (FLAGS_energy) {
     opt_goal = energy;
@@ -62,8 +45,8 @@ int main(int argc, char** argv) {
   int ms_num = FLAGS_num_ms;
   int dn_bw  = FLAGS_dn_bw;
   int rn_bw  = FLAGS_rn_bw;
-#else
-#endif
+//#else
+//#endif
 
   std::string Type[3] = {"CONV", "FC", "RNN"};
   /*
