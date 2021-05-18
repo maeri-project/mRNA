@@ -85,7 +85,7 @@ build/MAERI_Mapper -show_maei num_ms=32
 If you want to understand the impact of mapping over MAERI, example below is the command of mapping a convolutional layer of alexnet, and generating the profile result for this layer
 
 ```
-1. cd mNRA/input/alexnet
+1. cd mNRA/Input/alexnet
 2. ../../build/MAERI_Mapper -model_para="Model_parameter_4.txt" -show_energy 
                             -config_file="Config_file.txt" -num_ms=256 -dn_bw=128 -rn_bw=256 
                             -performance
